@@ -1,9 +1,12 @@
+import Banner from "./home compo/Banner";
 
 
 
 const Home = () => {
     return (
         <div>
+
+            <Banner></Banner>
             
         </div>
     );
