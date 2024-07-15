@@ -10,7 +10,7 @@ const Banner = () => {
 
 
 
-            <div className=" bg-no-repeat bg-cover  p-52 rounded-xl " style={{
+            <div className=" flex-col md:flex-row lg:flex-row bg-no-repeat bg-cover  p-52 rounded-xl " style={{
               backgroundImage: "url(  https://img.freepik.com/free-photo/old-sailing-ship-sails-through-dark-night-reflecting-water-generated-by-artificial-intelligence_188544-126489.jpg?t=st=1720713742~exp=1720717342~hmac=51aab114568745267a751af15732e93f2eeba80dbcb44b9709c79fb91e67e0a9&w=826  )",
             }}>
 
