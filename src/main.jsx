@@ -10,6 +10,10 @@ import Root from './Root';
 import Home from './Home';
 import Sea from './sea/Sea';
 import Ship from './ship/Ship';
+import Login from './firebase/Login';
+import SignUp from './firebase/SignUp';
+import AuthContext from './firebase/AuthContext';
+import PrivateRoute from './firebase/PrivateRoute';
 
 
 
@@ -27,12 +31,21 @@ const router = createBrowserRouter([
       },
       {
         path: "/sea",
-        element:  <Sea></Sea> ,
+        element:  <PrivateRoute><Sea></Sea></PrivateRoute>  ,
       },
       {
         path: "/ship",
-        element:   <Ship></Ship> ,
-      }
+        element:     <PrivateRoute><Ship></Ship></PrivateRoute> ,
+      },
+      {
+        path: "/login",
+        element:   <Login></Login> ,
+      },
+      {
+        path: "/up",
+        element:  <SignUp></SignUp>   ,
+      },
+      
     ],
   },
 ]);
@@ -40,6 +53,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />      
+
+    <AuthContext>
+
+    <RouterProvider router={router} /> 
+      
+    </AuthContext>
+         
   </React.StrictMode>,
 )
