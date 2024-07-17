@@ -9,6 +9,12 @@ import {
 import Root from './Root';
 import Home from './Home';
 import Sea from './sea/Sea';
+import Ship from './ship/Ship';
+
+
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -22,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/sea",
         element:  <Sea></Sea> ,
+      },
+      {
+        path: "/ship",
+        element:   <Ship></Ship> ,
       }
     ],
   },
@@ -30,6 +40,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-       <RouterProvider router={router} />
+    <RouterProvider router={router} />      
   </React.StrictMode>,
 )
